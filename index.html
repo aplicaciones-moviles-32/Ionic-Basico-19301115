@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    
+    <link rel="stylesheet" href="estilos.css">
+    <title>Git - Clase 1</title>
+</head>
+<body>
+    <!--<label for="numero">Escribe un numero aqui:</label>
+    <input type="number" id="numero">
+   
+    <button onclick="sumarValor()">Sumar Valor
+    <span>otro texto</span>
+    </button>
+    <button onclick="imprimirValor()">Imprimir Valor</button>
+    <p id="mensaje" class="textoRojo centrarTexto">
+        Hola, mundo <span>-----</span>
+    </p>
+    <ul class="textoRojo">
+        <li>Elemento 1</li>
+    </ul>
+    <button class="textoRojo">Texto Rojo - Boton</button>-->
+
+
+    <ion-app>
+        <ion-tabs> <!--contenedor de pestañas-->
+
+            <!---Contenido de las pestañas-->
+          <ion-tab tab="inicio"> <!--Pestaña de Inicio-->
+            
+            <ion-content>
+                <ion-grid id="feedContainer"> 
+                  <ion-row>
+                    <ion-card-header>
+                      <ion-grid>
+                        <ion-row>
+                          <ion-col size="1">
+                            <img src="cheems.jpg" alt="">
+                          </ion-col>
+                          <ion-col>
+                            @cheemsfuerte
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <img src="cheems.jpg" alt="">
+                      <p>@cheemsfuerte</p>
+                      <p>Corro 5 km al día</p>
+                    </ion-card-content>
+                  </ion-row>
+
+                    <ion-row id="imagenesInicio">
+                       
+                    </ion-row>
+                </ion-grid>
+            </ion-content>
+          </ion-tab>
+          <ion-tab tab="foto">
+            <h1>Pagina en construccion</h1>
+        </ion-tab>
+          <ion-tab tab="perfil">
+            
+           <ion-content>
+              <ion-header> 
+                <ion-toolbar>
+                  <ion-title id="nombre">
+                  @amimegustanmuchodeesas
+                </ion-title>
+                </ion-toolbar>
+              </ion-header>
+              
+            <ion-grid>
+              <ion-row>
+                <ion-col id="fotoperfil">
+                  <img src="gusta.jpg" alt="" width="100px">
+                </ion-col>
+                <ion-col>
+                  <p id="seguidores"><strong>125</strong></p>
+                  <p>Seguidores</p>
+                </ion-col>
+                <ion-col>
+                  <p id="seguidos"><strong>30</strong></p>
+                  <p>Seguidos</p>
+                </ion-col>
+                <ion-col>
+                  <p id="publicaciones"><strong>12</strong></p>
+                  <p>Publicaciones</p>
+                </ion-col>
+              </ion-row>
+                <ion-col size="12">
+                  <strong>@amimegustanmuchodeesas</strong>
+                </ion-col>
+                <ion-col size=12>
+                  <p id="descripcion">
+                    -A mí me gustan mucho de esas
+                    -A mí no me pican de esas
+                  </p>
+                </ion-col>
+              <ion-row>
+                <ion-col>
+                  <ion-button>
+                    Seguir
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button>
+                    Mnesaje
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button>
+                      Bloquear
+                    </ion-button>
+                </ion-col>
+              </ion-row>
+                
+              <ion-row id="imagenes">
+                    
+
+              </ion-row>
+               
+            </ion-grid>
+
+           </ion-content>
+
+
+          </ion-tab>
+         
+      
+          <ion-tab-bar slot="bottom"> <!--contenedor de botones-->
+            <ion-tab-button tab="inicio"> <!--boton de pestaña-->
+              <ion-label>Inicio</ion-label>
+              <ion-icon name="home"></ion-icon>
+
+            </ion-tab-button>
+
+            <ion-tab-button tab="foto">
+                <ion-label>Subir Foto</ion-label>
+                <ion-icon name="camera-outline"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="perfil">
+              <ion-label>Perfil</ion-label>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-app>
+
+
+</body>
+<script src="index.js"></script>
+</html>

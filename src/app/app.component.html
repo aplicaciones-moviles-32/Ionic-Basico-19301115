@@ -1,3 +1,10 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-content>
+  <ion-toggle color="primary"></ion-toggle>
+  <ion-button (click)="togglePerfil()">
+    <span *ngIf="perfil">Vista feed</span>
+    <span *ngIf="!perfil">Vista Perfil</span>
+  </ion-button>
+
+  <app-feed *ngIf="!perfil"></app-feed>
+  <app-perfil *ngIf="perfil"></app-perfil>
+</ion-content>

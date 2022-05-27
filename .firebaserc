@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "instaapp-68818": {
+      "hosting": {
+        "app": [
+          "instaapp-68818"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "instaapp-68818"
+  }
+}

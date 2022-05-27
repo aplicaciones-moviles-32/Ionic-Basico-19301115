@@ -1,27 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { BdServiceService } from './bd-service.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-raiz',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'InstaApp';
-  total= 90;
 
-  esCierto = true;
+  constructor(private bd: BdServiceService) {}
 
-  imagenes = [
-    "assets/gusta.jpg",
-    "assets/gusta.jpg",
-    "assets/cheems.jpg",
-    "assets/cheems.jpg",
-    "assets/gusta.jpg"
-  ];
+  usuario: string = "";
+  avatar: string = "";
 
-  perfil = true;
-
-  togglePerfil(): void {
-    this.perfil = !this.perfil;
+  ngOnInit(): void {
+    this.bd.getDatosUsuario().subscribe(res => {
+      console.log(res);
+      
+    })
   }
 }
